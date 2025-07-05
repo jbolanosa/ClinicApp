@@ -1,8 +1,11 @@
-function App() {
+import '@mantine/core/styles.css';
+import { MantineProvider } from "@mantine/core";
+import AppRouter from './router/AppRouter';
 
+export default function App() {
   return (
-    <div>App</div>
+    <MantineProvider>
+      <AppRouter />
+    </MantineProvider>
   )
 }
-
-export default App
