@@ -1,4 +1,4 @@
-import { AppShell, Burger, Group, Text, NavLink, Title, Divider } from '@mantine/core';
+import { AppShell, Burger, Group, Text, NavLink, Title, Divider, Container } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { BriefcaseMedical, CalendarHeart, Clock, SquareActivity, User } from 'lucide-react';
 import { NavLink as NavLink2, Outlet } from 'react-router';
@@ -49,7 +49,9 @@ export default function MainLayout() {
         }
       </AppShell.Navbar>
       <AppShell.Main>
-        <Outlet />
+        <Container size="xl" px="md" py="lg">
+          <Outlet />
+        </Container>
       </AppShell.Main>
     </AppShell>
   );
